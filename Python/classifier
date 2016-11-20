@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 19 11:55:39 2016
+
+@author: Akshay
+"""
+
+# Load boilerplate text
+import os as os
+import numpy as np
+import pandas as p
+
+os.chdir('C:/Users/aksha/OneDrive/Documents/GitHub/Evergreen-or-Ephemeral/Original Dataset')
+print("Loading text")
+traindata_raw = list(np.array(p.read_table('train.tsv'))[:,2])
+testdata_raw = list(np.array(p.read_table('test.tsv'))[:,2])
+y = np.array(p.read_table('../data/train.tsv'))[:,-1]
+y=y.astype(int)
